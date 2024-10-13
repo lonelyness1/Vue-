@@ -24,9 +24,9 @@
 export default {
   data() {
     return {
-      message: '我被绑定了',
-      inputValue: '',
-      status: '',
+      message: '我被绑定了',//用于被绑定的数据的标题显示
+      inputValue: '',//双向绑定的数据
+      status: '',//通过改变状态再通过ifeles 语句显示不同的内容
     }
   },
   methods: {
