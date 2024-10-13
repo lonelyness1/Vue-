@@ -1,24 +1,9 @@
-# test3
+### test2
 
-## Project setup
-```
-npm install
-```
+# ![本地路径](.\\src\\assets\\1.png )
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+当将鼠标置于数据上的时候会显示被绑定的标题
 
-### Compiles and minifies for production
-```
-npm run build
-```
+当在文本框中进行输入时下面同样会展示你所输入的内容
 
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+当点击不同的按钮更改数据的状态会显示不同的内容
