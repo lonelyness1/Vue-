@@ -1,6 +1,6 @@
 ### test2
 
-# ![本地路径](.\\src\\assets\\1.png )
+![alt](https://uploadfiles.nowcoder.com/images/20241013/111160062_1728796331209/4A47A0DB6E60853DEDFCFDF08A5CA249)
 
 当将鼠标置于数据上的时候会显示被绑定的标题
 
