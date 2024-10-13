@@ -1,24 +1,23 @@
-# test3
+# test4
 
-## Project setup
-```
-npm install
-```
+设计了两个页面分别为待办事项和人员信息管理（主要实现的功能，界面有点白板）
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+### 待办事项（TodoComponent.vue)
 
-### Compiles and minifies for production
-```
-npm run build
-```
+![alt](https://uploadfiles.nowcoder.com/images/20241013/111160062_1728825220813/FE66718E9287D1E1AA2E1111E89CA99C)
 
-### Lints and fixes files
-```
-npm run lint
-```
+页面中可以添加待办事项，可以通过点击按钮标记完成来增加删除线表示已完成，点击删除则删除此事项
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+通过映射vuex中的todo模块中的函数来调用里面更新和删除和添加的函数来做到改变各类状态。
+
+### 个人信息（PersonalInfoComponent.vue)
+
+![alt](https://uploadfiles.nowcoder.com/images/20241013/111160062_1728825413027/247026DD50E66CFEA9BEDC89FAD4105E)
+
+页面中可以添加个人姓名和邮箱，并且可以修改和删除个人信息，同时通过映射vuex中的user模块中的函数来调用里面更新和删除和添加的函数来做到改变各类状态。并且添加了异步操作模拟数据库的操作，在访问一秒后发送了测试数据张三过来，
+
+以上具体信息皆在代码中
+
+### 心得体会
+
+首先是遇到的挑战，首先是vue哪些依赖的下载，哪些东西都是国外的网站，下了好久好久都没下成功，最后是换了国内的源才搞好，另外是学习到了vue ui 这个启动的方法 ，十分方便处理处理各种依赖的下载以及运行打包，然后是实际作业的问题 在使用vuex时，为了方便经常把页面里的函数和store里面函数取一样的名字，导致死循环爆栈程序报错，无限回调，还找了很久不知道是哪里的问题，然后实际上action那边的异步操作是现场学的，之前都不太会，这个如果接上数据库的话就不知道咋搞了，其他的也是粗略了解边写边学的。现有作业的优化方向的话首先肯定是界面可以加点样式什么的，有点丑（，然后是链接上数据库，加上登录注册功能，可以当成一个备忘录记事本用，如果有网站的话还可以部署上线。
