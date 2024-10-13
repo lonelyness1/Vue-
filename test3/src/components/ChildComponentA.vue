@@ -8,12 +8,13 @@
   
   <script>
   export default {
-    props: ['message'],
+    props: ['message'],//接收父组件的参数
     methods: {
       sendMessageToParent() {
-        this.$emit('child-event', 'A儿子发来信息');
+        this.$emit('child-event', 'A儿子发来信息');//给父组件传值
       }
     }
   }
   </script>
+
   

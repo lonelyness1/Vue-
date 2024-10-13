@@ -2,22 +2,29 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import ParentComponent from '@/components/ParentComponent.vue';
 import LoginComponent from '@/components/LoginComponent.vue';
-
+import ChildComponentA from '@/components/ChildComponentA.vue';
+import ChildComponentB from '@/components/ChildComponentB.vue';
 const routes = [
   {
     path: '/',
-    name: 'Home',
-    component: ParentComponent
-  },
-  {
-    path: '/login',
     name: 'Login',
     component: LoginComponent
   },
   {
-    path: '/:catchAll(.*)', // 使用正则表达式定义通配符路由
-    redirect: '/'
-  }
+    path: '/ParentComponent',
+    name: 'ParentComponent',
+    component: ParentComponent, 
+  },
+  {
+    path: '/ChildA',
+    name: 'ChildA',
+    component: ChildComponentA, 
+  },
+  {
+    path: '/ChildB',
+    name: 'ChildB',
+    component: ChildComponentB, 
+  },
 ];
 
 const router = createRouter({
@@ -27,11 +34,13 @@ const router = createRouter({
 
 // 全局路由守卫
 router.beforeEach((to, from, next) => {
-  const isLoggedIn = !!localStorage.getItem('user');
+  const isLoggedIn = !!localStorage.getItem('user');  // 判断是否登录
+  console.log('路由守卫检查:', { isLoggedIn, to });
   if (to.name !== 'Login' && !isLoggedIn) {
-    next({ name: 'Login' });
+    alert('请先登录');  // 未登录时提醒
+    next({ name: 'Login' });  // 重定向到登录页面
   } else {
-    next();
+    next();  // 继续导航
   }
 });
 

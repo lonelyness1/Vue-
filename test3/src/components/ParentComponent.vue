@@ -1,7 +1,7 @@
 <template>
     <div>
       <h2>父组件</h2>
-      <!-- 向子组件传递数据 -->
+    
       <ChildComponentA :message="parentMessage" @child-event="handleChildEvent"/>
       <div>{{ childMessage }}</div>
       <ChildComponentB :counter="counter" @update-counter="updateCounter"/>
@@ -30,6 +30,8 @@
         this.childMessage=data;
       },
       updateCounter(value) {
+        console.log("hjjhjjjj");
+        
         this.counter += value;
       }
     }

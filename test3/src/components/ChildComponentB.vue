@@ -8,10 +8,10 @@
   
   <script>
   export default {
-    props: ['counter'],
+    props: ['counter'],//接收组件的参数
     methods: {
       incrementCounter() {
-        this.$emit('update-counter', 1);
+        this.$emit('update-counter', 1);//调用父组件的函数改变counter的值
       }
     }
   }
